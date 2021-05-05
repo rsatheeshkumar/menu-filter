@@ -3,7 +3,6 @@ import Menu from "./Menu";
 import Categories from "./Categories";
 import items from "./data";
 const allCatagories = ["all", ...new Set(items.map((item) => item.category))];
-console.log(allCatagories);
 
 function App() {
   const [menuItems, setMenuItems] = useState(items);
@@ -23,7 +22,7 @@ function App() {
           <h2>Our Menu</h2>
           <div className="underline"></div>
         </div>
-        <Categories allCatagories={allCatagories} filterItems={filterItems} />
+        <Categories categories={categories} filterItems={filterItems} />
         <Menu items={menuItems} />
       </div>
     </div>
